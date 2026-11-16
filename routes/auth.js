@@ -96,7 +96,7 @@ router.post("/login", async (req, res, next) => {
     const verifyPassword = await argon.verify(existingUser.password, password);
 
     if (!verifyPassword) {
-      return res.status(404).json({ message: "invalid password" });
+      return res.status(404).json({ message: "invalid credentials" });
     }
 
     // try {
