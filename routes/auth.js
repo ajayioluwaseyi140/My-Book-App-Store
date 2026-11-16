@@ -89,7 +89,7 @@ router.post("/login", async (req, res, next) => {
 
     //if user not found
     if (!existingUser) {
-      return res.status(404).json({ message: "email is not on our database" });
+      return res.status(404).json({ message: "credentials is not on our database" });
     }
 
     //verify password
