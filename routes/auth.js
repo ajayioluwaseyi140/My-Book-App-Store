@@ -99,11 +99,11 @@ router.post("/login", async (req, res, next) => {
       return res.status(404).json({ message: "invalid password" });
     }
 
-    try {
-      await sendWelcomeBackEmail(email);
-    } catch (error) {
-      console.error("Error sending welcome back email:", error);
-    }
+    // try {
+    //   await sendWelcomeBackEmail(email);
+    // } catch (error) {
+    //   console.error("Error sending welcome back email:", error);
+    // }
 
     //create payload and define jwtOption
     const payload = {
